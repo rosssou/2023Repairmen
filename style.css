@@ -1,0 +1,494 @@
+body {
+    background-color: black;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 12px;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none
+  }
+  
+  #repairmenfolder {
+    width:1450px;
+    height:auto;
+    position: absolute;
+    top: 49%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+  }
+
+
+.draggable {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    cursor: grab;
+    filter: brightness(117%)
+}
+
+.stooltag {
+    background-color: #000000; /* 배경색 설정 */
+    color: #ffffff; /* 텍스트 색상 설정 */
+    font-size: 11px; /* 폰트 크기 설정 */
+    position: absolute; /* 위치 설정 */
+    bottom: 100; /* 아래쪽으로 정렬 */
+    left: 0%; /* 가운데 정렬 */
+    transform: translateX(-100%, -100%); /* 수평 가운데 정렬 */
+    display: block; /* 보이도록 설정 */
+    width: 18px;
+    height: 18px;
+    text-align: center;
+    transition: transform 0.8s ease; /* 애니메이션 효과를 부드럽게 만들기 위한 transition 속성 추가 */
+    z-index: 1;
+}
+
+#mainDiv1.flipped .stooltag {
+    transform: rotateY(0deg); 
+}
+
+
+
+
+#mainDiv1 {
+    position: absolute;
+    width: 115px;
+    height: 240px;
+    cursor: grab;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5); /* 그림자 효과 */
+    overflow: hidden;
+    transition: transform 0.8s ease; /* 애니메이션 효과를 부드럽게 만들기 위한 transition 속성 추가 */
+}
+
+#mainDiv1 img {
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 250px; /* 이미지 너비 조정 */
+    max-height: auto; /* 이미지 높이 자동 조정 */
+    pointer-events: none; 
+}
+
+#mainDiv1.flipped {
+    transform: rotateY(180deg); /* Y 축을 기준으로 180도 회전하는 애니메이션 효과 */
+}
+
+#mainDiv1 .backside1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(202, 173, 29);
+    backface-visibility: hidden; /* 뒷면을 숨김 */
+    transform: rotateY(180deg); /* 초기에는 뒤집힌 상태로 시작 */
+    transition: transform 0.8s ease; /* 애니메이션 부드럽게 만들기 */
+    text-align: center;
+    font-size: 10px;
+}
+
+#mainDiv1.flipped .backside1 {
+    transform: rotateY(0deg); /* 애니메이션 시 backside가 정면으로 나타남 */
+}
+
+
+
+
+#mainDiv2 {
+    position: absolute;
+    width: 115px;
+    height: 240px;
+    cursor: grab;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5); /* 그림자 효과 */
+    overflow: hidden;
+    transition: transform 0.8s ease; /* 애니메이션 효과를 부드럽게 만들기 위한 transition 속성 추가 */
+}
+
+#mainDiv2 img {
+    position: absolute;
+    top: 51%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 250px; /* 이미지 너비 조정 */
+    max-height: auto; /* 이미지 높이 자동 조정 */
+    pointer-events: none; 
+}
+
+#mainDiv2.flipped {
+    transform: rotateY(180deg); /* Y 축을 기준으로 180도 회전하는 애니메이션 효과 */
+}
+
+#mainDiv2 .backside2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(202, 173, 29);
+    backface-visibility: hidden; /* 뒷면을 숨김 */
+    transform: rotateY(180deg); /* 초기에는 뒤집힌 상태로 시작 */
+    transition: transform 0.8s ease; /* 애니메이션 부드럽게 만들기 */
+    text-align: center;
+    font-size: 10px;
+}
+
+#mainDiv2.flipped .backside2 {
+    transform: rotateY(0deg); /* 애니메이션 시 backside가 정면으로 나타남 */
+}
+
+
+
+
+#mainDiv3 {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    cursor: grab;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5); /* 그림자 효과 */
+    overflow: hidden;
+    transition: transform 0.8s ease; /* 애니메이션 부드럽게 만들기 */
+}
+
+#mainDiv3 img {
+    position: absolute;
+    top: 57%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 220px; /* 이미지 너비 조정 */
+    max-height: auto; /* 이미지 높이 자동 조정 */
+    pointer-events: none; 
+}
+
+#mainDiv3.flipped {
+    transform: rotateY(180deg); /* Y 축을 기준으로 180도 회전하는 애니메이션 효과 */
+}
+
+#mainDiv3 .backside3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(202, 173, 29);
+    backface-visibility: hidden; /* 뒷면을 숨김 */
+    transform: rotateY(180deg); /* 초기에는 뒤집힌 상태로 시작 */
+    transition: transform 0.8s ease; /* 애니메이션 부드럽게 만들기 */
+    text-align: center;
+    font-size: 10px;
+}
+
+#mainDiv3.flipped .backside3 {
+    transform: rotateY(0deg); /* 애니메이션 시 backside가 정면으로 나타남 */
+}
+
+
+
+#mainDiv4 {
+    position: absolute;
+    width: 270px;
+    height: 250px;
+    cursor: grab;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5); /* 그림자 효과 */
+    overflow: hidden;
+    transition: transform 0.8s ease; /* 애니메이션 부드럽게 만들기 */
+}
+
+#mainDiv4 img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 290px; /* 이미지 너비 조정 */
+    max-height: auto; /* 이미지 높이 자동 조정 */
+    pointer-events: none; 
+}
+
+#mainDiv4.flipped {
+    transform: rotateY(180deg); /* Y 축을 기준으로 180도 회전하는 애니메이션 효과 */
+}
+
+#mainDiv4 .backside4 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(202, 173, 29);
+    backface-visibility: hidden; /* 뒷면을 숨김 */
+    transform: rotateY(180deg); /* 초기에는 뒤집힌 상태로 시작 */
+    transition: transform 0.8s ease; /* 애니메이션 부드럽게 만들기 */
+    text-align: center;
+    font-size: 10px;
+}
+
+#mainDiv4.flipped .backside4 {
+    transform: rotateY(0deg); /* 애니메이션 시 backside가 정면으로 나타남 */
+}
+
+
+
+#mainDiv5 {
+    position: absolute;
+    width: 290px;
+    height: 240px;
+    cursor: grab;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5); /* 그림자 효과 */
+    overflow: hidden;
+    transition: transform 0.8s ease; /* 애니메이션 부드럽게 만들기 */
+}
+
+#mainDiv5 img {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 300px; /* 이미지 너비 조정 */
+    max-height: auto; /* 이미지 높이 자동 조정 */
+    pointer-events: none; 
+}
+
+#mainDiv5.flipped {
+    transform: rotateY(180deg); /* Y 축을 기준으로 180도 회전하는 애니메이션 효과 */
+}
+
+#mainDiv5 .backside5 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(202, 173, 29);
+    backface-visibility: hidden; /* 뒷면을 숨김 */
+    transform: rotateY(180deg); /* 초기에는 뒤집힌 상태로 시작 */
+    transition: transform 0.8s ease; /* 애니메이션 부드럽게 만들기 */
+    text-align: center;
+    font-size: 10px;
+}
+
+#mainDiv5.flipped .backside5 {
+    transform: rotateY(0deg); /* 애니메이션 시 backside가 정면으로 나타남 */
+}
+
+
+
+
+#mainDiv6 {
+    position: absolute;
+    width: 210px;
+    height: 280px;
+    cursor: grab;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5); /* 그림자 효과 */
+    overflow: hidden;
+    transition: transform 0.8s ease; /* 애니메이션 부드럽게 만들기 */
+}
+
+#mainDiv6 img {
+    position: absolute;
+    top: 51%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 300px; /* 이미지 너비 조정 */
+    max-height: auto; /* 이미지 높이 자동 조정 */
+    pointer-events: none; 
+}
+
+#mainDiv6.flipped {
+    transform: rotateY(180deg); /* Y 축을 기준으로 180도 회전하는 애니메이션 효과 */
+}
+
+#mainDiv6 .backside6 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(202, 173, 29);
+    backface-visibility: hidden; /* 뒷면을 숨김 */
+    transform: rotateY(180deg); /* 초기에는 뒤집힌 상태로 시작 */
+    transition: transform 0.8s ease; /* 애니메이션 부드럽게 만들기 */
+    text-align: center;
+    font-size: 10px;
+}
+
+#mainDiv6.flipped .backside6 {
+    transform: rotateY(0deg); /* 애니메이션 시 backside가 정면으로 나타남 */
+}
+
+
+
+
+#mainDiv7 {
+    position: absolute;
+    width: 170px;
+    height: 360px;
+    cursor: grab;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5); /* 그림자 효과 */
+    overflow: hidden;
+    transition: transform 0.8s ease; /* 애니메이션 부드럽게 만들기 */
+}
+
+#mainDiv7 img {
+    position: absolute;
+    top: 49%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 380px; /* 이미지 너비 조정 */
+    max-height: auto; /* 이미지 높이 자동 조정 */
+    pointer-events: none; 
+}
+
+#mainDiv7.flipped {
+    transform: rotateY(180deg); /* Y 축을 기준으로 180도 회전하는 애니메이션 효과 */
+}
+
+#mainDiv7 .backside7 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(202, 173, 29);
+    backface-visibility: hidden; /* 뒷면을 숨김 */
+    transform: rotateY(180deg); /* 초기에는 뒤집힌 상태로 시작 */
+    transition: transform 0.8s ease; /* 애니메이션 부드럽게 만들기 */
+    text-align: center;
+    font-size: 10px;
+}
+
+#mainDiv7.flipped .backside7 {
+    transform: rotateY(0deg); /* 애니메이션 시 backside가 정면으로 나타남 */
+}
+
+
+
+#mainDiv8 {
+    position: absolute;
+    width: 240px;
+    height: 250px;
+    cursor: grab;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5); /* 그림자 효과 */
+    overflow: hidden;
+    transition: transform 0.8s ease; /* 애니메이션 부드럽게 만들기 */
+}
+
+#mainDiv8 img {
+    position: absolute;
+    top: 47%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 280px; /* 이미지 너비 조정 */
+    max-height: auto; /* 이미지 높이 자동 조정 */
+    pointer-events: none; 
+}
+
+#mainDiv8.flipped {
+    transform: rotateY(180deg); /* Y 축을 기준으로 180도 회전하는 애니메이션 효과 */
+}
+
+#mainDiv8 .backside8 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(202, 173, 29);
+    backface-visibility: hidden; /* 뒷면을 숨김 */
+    transform: rotateY(180deg); /* 초기에는 뒤집힌 상태로 시작 */
+    transition: transform 0.8s ease; /* 애니메이션 부드럽게 만들기 */
+    text-align: center;
+    font-size: 10px;
+}
+
+#mainDiv8.flipped .backside8 {
+    transform: rotateY(0deg); /* 애니메이션 시 backside가 정면으로 나타남 */
+}
+
+
+
+#mainDiv9 {
+    position: absolute;
+    width: 110px;
+    height: 145px;
+    cursor: grab;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5); /* 그림자 효과 */
+    overflow: hidden;
+    transition: transform 0.8s ease; /* 애니메이션 부드럽게 만들기 */
+}
+
+#mainDiv9 img {
+    position: absolute;
+    top: 54%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 270px; /* 이미지 너비 조정 */
+    max-height: auto; /* 이미지 높이 자동 조정 */
+    pointer-events: none; 
+}
+
+#mainDiv9.flipped {
+    transform: rotateY(180deg); /* Y 축을 기준으로 180도 회전하는 애니메이션 효과 */
+}
+
+#mainDiv9 .backside9 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(202, 173, 29);
+    backface-visibility: hidden; /* 뒷면을 숨김 */
+    transform: rotateY(180deg); /* 초기에는 뒤집힌 상태로 시작 */
+    transition: transform 0.8s ease; /* 애니메이션 부드럽게 만들기 */
+    text-align: center;
+    font-size: 10px;
+}
+
+#mainDiv9.flipped .backside9 {
+    transform: rotateY(0deg); /* 애니메이션 시 backside가 정면으로 나타남 */
+}
+
+
+
+
+#mainDiv11 {
+    position: absolute;
+    width: 90px;
+    height: 92px;
+    cursor: grab;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5); /* 그림자 효과 */
+    overflow: hidden;
+    transition: transform 0.8s ease; /* 애니메이션 부드럽게 만들기 */
+}
+
+#mainDiv11 img {
+    position: absolute;
+    top: 53%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 220px; /* 이미지 너비 조정 */
+    max-height: auto; /* 이미지 높이 자동 조정 */
+    pointer-events: none; 
+}
+
+#mainDiv11.flipped {
+    transform: rotateY(180deg); /* Y 축을 기준으로 180도 회전하는 애니메이션 효과 */
+}
+
+#mainDiv11 .backside11 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(202, 173, 29);
+    backface-visibility: hidden; /* 뒷면을 숨김 */
+    transform: rotateY(180deg); /* 초기에는 뒤집힌 상태로 시작 */
+    transition: transform 0.8s ease; /* 애니메이션 부드럽게 만들기 */
+    text-align: center;
+    font-size: 10px;
+}
+
+#mainDiv11.flipped .backside11 {
+    transform: rotateY(0deg); /* 애니메이션 시 backside가 정면으로 나타남 */
+}
